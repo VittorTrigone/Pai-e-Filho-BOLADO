@@ -1,0 +1,31 @@
+<div class="p-3 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="container max-w-500 bg-light rounded shadow-lg ">
+    <app-form-estudante [Estudante]="Estudante" (saveEvent)="onSaveEvent($event)"
+      (cleanEvent)="onCleanEvent()"></app-form-estudante>
+    <table class="table table-light mt-3">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Email</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Endereço</th>
+          <th scope="col">Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let estudante of Estudantes">
+          <th scope="row">{{estudante.id}}</th>
+          <td>{{estudante.nome_est}}</td>
+          <td>{{estudante.email}}</td>
+          <td>{{estudante.cpf}}</td>
+          <td>{{estudante.endereco}}</td>
+          <td>
+            <button class="btn btn-outline-primary me-2" (click)="edit(estudante)">Editar</button>
+            <button class="btn btn-outline-danger" (click)="delete(estudante)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
