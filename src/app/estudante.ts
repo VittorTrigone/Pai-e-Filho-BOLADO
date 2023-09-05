@@ -1,9 +1,8 @@
 export interface Estudante{
-nome: any;
+nomes: any;
     id : number;
-    nome_est : string;
+    nome : string;
     email: string;
     endereco: string;
     cpf: string;
   }
-  

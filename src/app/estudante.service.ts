@@ -7,7 +7,7 @@ import { Estudante } from './estudante';
   providedIn: 'root'
 })
 export class EstudanteService {
-   url = "http://localhost:3000/estudantes";
+   url = "http://localhost:8080/estudantes";
   constructor(private http: HttpClient) {}
   getEstudantes(): Observable<Estudante[]>{
   return this.http.get<Estudante[]>(this.url);
